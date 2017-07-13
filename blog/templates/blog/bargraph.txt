@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>EXCEL DATA</title>
+    </head>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+{
+i="0" + i;
+}
+return i;
+}
+
+    <body>
+        <div>
+            <h1><a href=""><font color = "Pink"> Building a ScatterPlot and a Bargraph</font></a></h1>
+        </div>
+
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">My first post</a></h2>
+        <p>
+    <img src = "bargraphtrial.jpg"
+         alt = "Picture of a Diagram" />
+  </p>
+</script>
+        </div>
+    </body>
+</html>

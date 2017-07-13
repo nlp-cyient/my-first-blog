@@ -1,22 +1,73 @@
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">Django Girls Blog</a></h1>
-        </div>
+<head>
+<title>Dashboard</title>
+<style>
+table {
+    width:10%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		title:{
+			text: "CYIENT LIMITED"              
+		},
+		data: [              
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "column",
+			dataPoints: [
+				{ label: "AeroSpace",  y: 70  },
+				{ label: "IT-Servicese", y: 30  },
+				{ label: "HumanResourc", y: 50  },
+				{ label: "SemiConductor",  y: 40  },
+				{ label: "R&D",  y: 60  }
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<p>The following is the pictorial representation for the population in various departments in Cyient Ltd</p>
+<p>The same data can be viewed in tabular format below</p>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
-    </body>
+<div style="overflow-x:auto;">
+  <table cellspacing="10" border-collapse: collapse;>
+    <tr>
+      <th>Department</th>
+      <th>Population</th>
+    </tr>
+    <tr>
+      <td>AeroSpace</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>IT-Services</td>
+      <td>15</td>
+    <tr>
+      <td>HumanResource</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>SemiConductors</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>R&D</td>
+      <td>28</td>
+    </tr>
+  </table>
+</div>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
 </html>
